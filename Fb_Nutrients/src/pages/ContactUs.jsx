@@ -26,11 +26,11 @@ function ContactUs() {
         <div className="mx-auto max-w-7xl">
           <Navigation />
 
-          <div className="mx-auto max-w-4xl pb-20 pt-14 text-center text-white">
+          <div className="mx-auto max-w-4xl pb-20 pt-10 text-center text-white md:pt-14">
             <p className="animate-fade-up text-sm font-bold uppercase tracking-[0.3em] text-lime-100">
               Contact Us
             </p>
-            <h1 className="animate-fade-up-delayed mt-5 font-serif text-5xl leading-none tracking-tight sm:text-6xl">
+            <h1 className="animate-fade-up-delayed mt-5 font-serif text-4xl leading-none tracking-tight sm:text-5xl lg:text-6xl">
               Let's talk about fertilizers, distribution, and crop nutrition solutions.
             </h1>
             <p className="animate-fade-up mx-auto mt-6 max-w-2xl text-base leading-8 text-white/84 sm:text-lg">
@@ -51,15 +51,15 @@ function ContactUs() {
                 style={{ animationDelay: `${index * 120}ms` }}
               >
                 <div className="mb-4 h-11 w-11 rounded-full bg-[linear-gradient(135deg,#224b29,#d98b26)]" />
-                <h2 className="font-serif text-2xl text-slate-950">{card.title}</h2>
+                <h2 className="font-serif text-xl text-slate-950 sm:text-2xl">{card.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-slate-600">{card.text}</p>
                 <p className="mt-5 text-sm font-bold text-emerald-700">{card.value}</p>
               </article>
             ))}
           </div>
 
-          <div className="mt-10 rounded-[2rem] border border-emerald-100 bg-white p-8 shadow-[0_16px_45px_rgba(70,90,50,0.08)]">
-            <h2 className="font-serif text-3xl text-slate-950">Send your crop or product requirement</h2>
+          <div className="mt-10 rounded-[2rem] border border-emerald-100 bg-white p-6 shadow-[0_16px_45px_rgba(70,90,50,0.08)] sm:p-8">
+            <h2 className="font-serif text-2xl text-slate-950 sm:text-3xl">Send your crop or product requirement</h2>
             <div className="mt-6 grid gap-4 md:grid-cols-2">
               <input
                 className="rounded-2xl border border-emerald-200 px-4 py-3 outline-none"

@@ -26,15 +26,15 @@ function HomePage() {
         <div className="mx-auto max-w-7xl">
           <Navigation />
 
-          <div className="grid gap-10 pb-24 pt-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-            <div className="animate-fade-up rounded-[2rem] border border-white/12 bg-[linear-gradient(180deg,rgba(18,30,16,0.72)_0%,rgba(24,37,20,0.58)_52%,rgba(24,37,20,0.34)_100%)] p-6 text-white shadow-[0_24px_70px_rgba(20,20,10,0.22)] backdrop-blur-sm sm:p-8">
+          <div className="grid gap-8 pb-20 pt-10 md:gap-10 md:pt-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-24">
+            <div className="animate-fade-up rounded-[2rem] border border-white/12 bg-[linear-gradient(180deg,rgba(18,30,16,0.72)_0%,rgba(24,37,20,0.58)_52%,rgba(24,37,20,0.34)_100%)] p-5 text-white shadow-[0_24px_70px_rgba(20,20,10,0.22)] backdrop-blur-sm sm:p-8">
               <p className="text-sm font-bold uppercase tracking-[0.3em] text-lime-50">
                 Advanced fertilizers for modern agriculture
               </p>
-              <h1 className="mt-5 max-w-3xl font-serif text-5xl leading-none tracking-tight sm:text-6xl lg:text-7xl">
+              <h1 className="mt-5 max-w-3xl font-serif text-4xl leading-none tracking-tight sm:text-5xl lg:text-7xl">
                 Premium fertilizer solutions from Spain for healthier crops and stronger yields.
               </h1>
-              <p className="mt-6 max-w-2xl text-base leading-8 text-white/95 sm:text-lg">
+              <p className="mt-6 max-w-2xl text-base leading-7 text-white/95 sm:text-lg sm:leading-8">
                 Our agricultural fertilizers are designed to improve soil balance, support nutrient
                 uptake, strengthen plant development, and help growers achieve more consistent field
                 performance across every stage of the crop cycle.
@@ -55,14 +55,14 @@ function HomePage() {
                 </a>
               </div>
 
-              <div className="mt-10 grid gap-4 sm:grid-cols-3">
+              <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 {metrics.map((metric, index) => (
                   <div
                     className="animate-fade-up rounded-[1.5rem] border border-white/14 bg-slate-950/28 p-5 backdrop-blur-md"
                     key={metric.label}
                     style={{ animationDelay: `${index * 120}ms` }}
                   >
-                    <p className="text-3xl font-bold text-lime-50">{metric.value}</p>
+                    <p className="text-2xl font-bold text-lime-50 sm:text-3xl">{metric.value}</p>
                     <p className="mt-2 text-sm leading-6 text-white/90">{metric.label}</p>
                   </div>
                 ))}
@@ -72,16 +72,16 @@ function HomePage() {
             <div className="animate-fade-up-delayed relative">
               <div className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 p-3 shadow-[0_30px_80px_rgba(40,35,18,0.22)] backdrop-blur">
                 <img
-                  className="h-[28rem] w-full rounded-[1.35rem] object-cover sm:h-[34rem]"
+                  className="h-[20rem] w-full rounded-[1.35rem] object-cover sm:h-[26rem] lg:h-[34rem]"
                   src={heroImgSrc}
                   alt="Spanish agricultural fertilizer brand visual"
                 />
                 <div className="absolute inset-3 rounded-[1.35rem] bg-[linear-gradient(180deg,rgba(10,16,9,0.04)_15%,rgba(10,16,9,0.6)_100%)]" />
-                <div className="absolute bottom-7 left-6 right-6 rounded-[1.4rem] border border-white/10 bg-slate-950/70 p-5 text-white backdrop-blur">
+                <div className="absolute bottom-4 left-4 right-4 rounded-[1.4rem] border border-white/10 bg-slate-950/70 p-4 text-white backdrop-blur sm:bottom-7 sm:left-6 sm:right-6 sm:p-5">
                   <p className="text-[0.66rem] font-bold uppercase tracking-[0.28em] text-lime-100">
                     Fertilizer expertise from Spain
                   </p>
-                  <p className="mt-2 font-serif text-2xl leading-tight">
+                  <p className="mt-2 font-serif text-xl leading-tight sm:text-2xl">
                     Better nutrition, stronger crops, and smarter agricultural performance.
                   </p>
                 </div>
@@ -96,7 +96,7 @@ function HomePage() {
           <div className="grid gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-start">
             <div className="animate-fade-up">
               <p className="text-xs font-bold uppercase tracking-[0.32em] text-emerald-700">Who We Are</p>
-              <h2 className="mt-3 font-serif text-4xl leading-tight text-slate-950 sm:text-5xl">
+              <h2 className="mt-3 font-serif text-3xl leading-tight text-slate-950 sm:text-4xl lg:text-5xl">
                 Built for growers who need healthier crops, stronger roots, and better field results.
               </h2>
               <p className="mt-5 max-w-2xl text-base leading-8 text-slate-700">
@@ -108,7 +108,7 @@ function HomePage() {
                 <p className="text-[0.7rem] font-bold uppercase tracking-[0.28em] text-lime-50">
                   Our Promise
                 </p>
-                <p className="mt-3 font-serif text-2xl leading-tight">
+                <p className="mt-3 font-serif text-xl leading-tight sm:text-2xl">
                   Practical fertilizer programs designed to improve crop nutrition, plant strength, and overall yield quality.
                 </p>
                 <p className="mt-3 text-sm leading-7 text-white/92">
@@ -130,7 +130,7 @@ function HomePage() {
                       Agricultural Focus
                     </p>
                   </div>
-                  <h3 className="font-serif text-2xl text-slate-950">{item.title}</h3>
+                  <h3 className="font-serif text-xl text-slate-950 sm:text-2xl">{item.title}</h3>
                   <p className="mt-3 text-sm leading-7 text-slate-700">{item.text}</p>
                 </article>
               ))}
@@ -141,7 +141,7 @@ function HomePage() {
         <section className="mx-auto mt-20 max-w-7xl">
           <div className="mb-10 max-w-3xl animate-fade-up">
             <p className="text-xs font-bold uppercase tracking-[0.32em] text-emerald-700">Our Products</p>
-            <h2 className="mt-3 font-serif text-4xl leading-tight text-slate-950 sm:text-5xl">
+            <h2 className="mt-3 font-serif text-3xl leading-tight text-slate-950 sm:text-4xl lg:text-5xl">
               Complete fertilizer and plant nutrition range in one section.
             </h2>
             <p className="mt-4 text-base leading-8 text-slate-700">
@@ -150,7 +150,7 @@ function HomePage() {
             </p>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
             {allProducts.map((product, index) => (
             <a
               className="animate-fade-up group overflow-hidden rounded-[1.7rem] border border-emerald-100 bg-white shadow-[0_16px_45px_rgba(70,90,50,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(70,90,50,0.14)]"

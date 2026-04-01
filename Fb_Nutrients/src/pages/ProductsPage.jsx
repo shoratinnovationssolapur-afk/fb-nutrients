@@ -20,7 +20,7 @@ function ProductsPage() {
             <p className="animate-fade-up text-sm font-bold uppercase tracking-[0.3em] text-lime-100">
               Products
             </p>
-            <h1 className="animate-fade-up-delayed mt-5 font-serif text-5xl leading-none tracking-tight sm:text-6xl">
+            <h1 className="animate-fade-up-delayed mt-5 font-serif text-4xl leading-none tracking-tight sm:text-5xl lg:text-6xl">
               Fertilizers and plant nutrition products in one dedicated section.
             </h1>
             <p className="animate-fade-up mx-auto mt-6 max-w-2xl text-base leading-8 text-white/84 sm:text-lg">
@@ -51,7 +51,7 @@ function ProductsPage() {
             ))}
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
             {visibleProducts.map((product, index) => (
               <a
                 className="animate-fade-up group rounded-[1.6rem] border border-emerald-100 bg-white p-4 shadow-[0_18px_50px_rgba(70,90,50,0.1)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_28px_70px_rgba(70,90,50,0.16)]"

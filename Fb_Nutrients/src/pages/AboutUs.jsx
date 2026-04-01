@@ -10,10 +10,10 @@ function AboutUs() {
         <div className="mx-auto max-w-7xl">
           <Navigation />
 
-          <div className="grid gap-10 pb-20 pt-14 lg:grid-cols-[1fr_1fr] lg:items-center">
+          <div className="grid gap-8 pb-20 pt-10 md:gap-10 md:pt-14 lg:grid-cols-[1fr_1fr] lg:items-center">
             <div className="animate-fade-up text-white">
               <p className="text-sm font-bold uppercase tracking-[0.3em] text-lime-100">About Us</p>
-              <h1 className="mt-5 max-w-3xl font-serif text-5xl leading-none tracking-tight sm:text-6xl">
+              <h1 className="mt-5 max-w-3xl font-serif text-4xl leading-none tracking-tight sm:text-5xl lg:text-6xl">
                 A Spanish fertilizer brand dedicated to crop nutrition, soil health, and farm productivity.
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-8 text-white/84 sm:text-lg">
@@ -25,7 +25,7 @@ function AboutUs() {
 
             <div className="animate-fade-up-delayed overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 p-3 backdrop-blur">
               <img
-                className="h-[24rem] w-full rounded-[1.35rem] object-cover sm:h-[30rem]"
+                className="h-[18rem] w-full rounded-[1.35rem] object-cover sm:h-[24rem] lg:h-[30rem]"
                 src={GrassImage}
                 alt="About FB Nutrients Spain"
               />
@@ -38,7 +38,7 @@ function AboutUs() {
         <section className="mx-auto max-w-7xl">
           <div className="max-w-3xl animate-fade-up">
             <p className="text-xs font-bold uppercase tracking-[0.32em] text-emerald-700">Company Profile</p>
-            <h2 className="mt-3 font-serif text-4xl leading-tight text-slate-950 sm:text-5xl">
+            <h2 className="mt-3 font-serif text-3xl leading-tight text-slate-950 sm:text-4xl lg:text-5xl">
               Focused on plant nutrition, fertilizer innovation, and sustainable agricultural growth.
             </h2>
             <p className="mt-5 text-base leading-8 text-slate-600">
@@ -57,7 +57,7 @@ function AboutUs() {
                 style={{ animationDelay: `${index * 120}ms` }}
               >
                 <div className="mb-4 h-11 w-11 rounded-full bg-[linear-gradient(135deg,#224b29,#d98b26)]" />
-                <h3 className="font-serif text-2xl text-slate-950">{item.title}</h3>
+                <h3 className="font-serif text-xl text-slate-950 sm:text-2xl">{item.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-slate-600">{item.text}</p>
               </article>
             ))}

@@ -10,12 +10,12 @@ function Footer() {
   return (
     <footer className="relative mt-24 px-5 pb-8 sm:px-8 lg:px-14">
       <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[linear-gradient(135deg,#18341c_0%,#355626_45%,#c8842e_100%)] text-white shadow-[0_28px_80px_rgba(40,35,18,0.22)]">
-        <div className="grid gap-8 p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-10">
+        <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-10">
           <div>
             <p className="text-[0.72rem] font-bold uppercase tracking-[0.34em] text-lime-100">
               FBNE Spain
             </p>
-            <h2 className="mt-4 max-w-xl font-serif text-4xl leading-tight">
+            <h2 className="mt-4 max-w-xl font-serif text-3xl leading-tight sm:text-4xl">
               Smarter fertilizers for healthier crops, stronger roots, and better agricultural performance.
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-8 text-white/85">
@@ -47,7 +47,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/12 px-8 py-5 text-sm text-white/75 lg:px-10">
+        <div className="border-t border-white/12 px-6 py-5 text-sm text-white/75 sm:px-8 lg:px-10">
           Copyright 2026 FBNE Spain. Agricultural fertilizers and ecological nutrients from Murcia, Spain.
         </div>
       </div>
