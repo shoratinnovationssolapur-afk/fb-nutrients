@@ -66,25 +66,48 @@ function ProductDetailPage({ product }) {
 
       <main className="relative z-10 px-5 pb-24 sm:px-8 lg:px-14">
         <section className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="rounded-[2rem] border border-emerald-100 bg-white p-8 shadow-[0_16px_45px_rgba(70,90,50,0.08)]">
-            <p className="text-xs font-bold uppercase tracking-[0.32em] text-emerald-700">Product Details</p>
-            <h2 className="mt-3 font-serif text-3xl leading-tight text-slate-950 sm:text-4xl">Technical overview</h2>
-            <p className="mt-5 text-base leading-8 text-slate-700">{product.description}</p>
-            <p className="mt-5 text-base leading-8 text-slate-700">{product.note}</p>
+          <div className="relative overflow-hidden rounded-[2rem] border border-emerald-100 bg-white p-8 shadow-[0_22px_60px_rgba(70,90,50,0.1)]">
+            <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-amber-100/60 blur-3xl" />
+            <div className="absolute left-0 top-24 h-32 w-32 rounded-full bg-emerald-100/50 blur-3xl" />
+            <div className="relative">
+              <div className="inline-flex rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.32em] text-emerald-700">
+                Product Details
+              </div>
+              <h2 className="mt-5 font-serif text-3xl leading-tight text-slate-950 sm:text-4xl">
+                Overview About The Product
+              </h2>
+              <div className="mt-6 h-1.5 w-24 rounded-full bg-[linear-gradient(90deg,#224b29,#d98b26)]" />
+              <p className="mt-7 text-base leading-8 text-slate-700">{product.description}</p>
+              <div className="mt-8 rounded-[1.6rem] border border-emerald-100 bg-[linear-gradient(135deg,#f7fbf2_0%,#fff8ef_100%)] p-6">
+                <p className="text-[0.7rem] font-bold uppercase tracking-[0.26em] text-emerald-700">
+                  Product Summary
+                </p>
+                <p className="mt-3 text-base leading-8 text-slate-700">{product.note}</p>
+              </div>
+            </div>
           </div>
 
-          <div className="rounded-[2rem] border border-emerald-100 bg-[linear-gradient(135deg,#f5fbef_0%,#fff8ef_100%)] p-8 shadow-[0_16px_45px_rgba(70,90,50,0.08)]">
-            <p className="text-xs font-bold uppercase tracking-[0.32em] text-emerald-700">Key Benefits</p>
-            <h2 className="mt-3 font-serif text-3xl leading-tight text-slate-950 sm:text-4xl">Why growers choose it</h2>
+          <div className="relative overflow-hidden rounded-[2rem] border border-emerald-100 bg-[linear-gradient(135deg,#f5fbef_0%,#fff8ef_100%)] p-8 shadow-[0_22px_60px_rgba(70,90,50,0.1)]">
+            <div className="absolute bottom-0 right-0 h-40 w-40 rounded-full bg-lime-100/60 blur-3xl" />
+            <div className="relative">
+            <div className="inline-flex rounded-full border border-emerald-200 bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.32em] text-emerald-700">
+              Key Benefits
+            </div>
+            <h2 className="mt-5 font-serif text-3xl leading-tight text-slate-950 sm:text-4xl">Why Growers Choose It</h2>
+            <div className="mt-6 h-1.5 w-24 rounded-full bg-[linear-gradient(90deg,#224b29,#d98b26)]" />
             <div className="mt-6 grid gap-4">
-              {product.benefits.map((benefit) => (
+              {product.benefits.map((benefit, index) => (
                 <div
-                  className="rounded-[1.4rem] border border-emerald-100 bg-white p-5 text-sm leading-7 text-slate-700"
+                  className="flex items-start gap-4 rounded-[1.4rem] border border-emerald-100 bg-white p-5 text-sm leading-7 text-slate-700 shadow-[0_10px_30px_rgba(70,90,50,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_38px_rgba(70,90,50,0.1)]"
                   key={benefit}
                 >
-                  {benefit}
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[linear-gradient(135deg,#224b29,#d98b26)] text-sm font-bold text-white">
+                    {index + 1}
+                  </div>
+                  <p>{benefit}</p>
                 </div>
               ))}
+            </div>
             </div>
           </div>
         </section>

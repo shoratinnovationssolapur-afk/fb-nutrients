@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navigation from "../components/Navigation.jsx";
 import Footer from "../components/Footer.jsx";
+import { heroImgSrc, heroVideo } from "../data/siteContent.js";
 
 // Configuration
 const WHATSAPP_NUMBER = "349666766329"; // Spain country code + number
@@ -58,10 +59,18 @@ export default function ContactUs() {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      <header className="relative bg-[#224b29] px-5 pt-4 pb-20 sm:px-8 lg:px-14 overflow-hidden">
+      <header className="relative  px-5 pt-4 pb-20 sm:px-8 lg:px-14 overflow-hidden">
         {/* Background Decoration */}
         <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
-             <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1600&auto=format&fit=crop" alt="bg" className="object-cover w-full h-full" />
+          <video
+            className="absolute inset-0 h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
         </div>
         
         <div className="mx-auto max-w-7xl relative z-10">

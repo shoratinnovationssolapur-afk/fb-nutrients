@@ -1,14 +1,53 @@
 import { useState } from 'react'
 import Navigation from '../components/Navigation.jsx'
 import Footer from '../components/Footer.jsx'
-import { allProducts, productFamilies } from '../data/siteContent.js'
+import { useLanguage } from '../components/LanguageContext.jsx'
+import { getAllProducts, getProductFamilies } from '../data/siteContent.js'
 
 function ProductsPage() {
-  const [selectedFamily, setSelectedFamily] = useState('All Products')
-  const visibleProducts =
-    selectedFamily === 'All Products'
-      ? allProducts
-      : allProducts.filter((product) => product.family === selectedFamily)
+  const { language } = useLanguage()
+  const allProducts = getAllProducts(language)
+  const productFamilies = getProductFamilies(language)
+  const allProductsLabel = language === 'es' ? 'Todos los productos' : 'All Products'
+  const content =
+    language === 'es'
+      ? {
+          eyebrow: 'Productos',
+          title: 'Fertilizantes y productos de nutricion vegetal en una seccion dedicada.',
+          intro:
+            'Explora toda la gama de productos agricolas en un solo lugar, incluyendo soluciones para nutricion del cultivo, desarrollo radicular, resiliencia vegetal y un rendimiento de campo mas eficiente.',
+          searchPlaceholder: 'Buscar productos por nombre, categoria o familia',
+          detailCta: 'Ver detalles del producto',
+          noResults: 'No hay productos que coincidan con tu busqueda y filtro de familia.',
+          spain: 'Espana',
+        }
+      : {
+          eyebrow: 'Products',
+          title: 'Fertilizers and plant nutrition products in one dedicated section.',
+          intro:
+            'Explore the complete range of agricultural products in one place, including solutions for crop nutrition, root development, plant resilience, and more efficient field performance.',
+          searchPlaceholder: 'Search products by name, category, or family',
+          detailCta: 'View product details',
+          noResults: 'No products match your current search and family filter.',
+          spain: 'Spain',
+        }
+
+  const [selectedFamily, setSelectedFamily] = useState(allProductsLabel)
+  const [searchTerm, setSearchTerm] = useState('')
+
+  const visibleProducts = allProducts.filter((product) => {
+    const matchesFamily =
+      selectedFamily === allProductsLabel || product.family === selectedFamily
+    const query = searchTerm.trim().toLowerCase()
+    const matchesSearch =
+      query === '' ||
+      product.name.toLowerCase().includes(query) ||
+      product.category.toLowerCase().includes(query) ||
+      product.family.toLowerCase().includes(query) ||
+      product.note.toLowerCase().includes(query)
+
+    return matchesFamily && matchesSearch
+  })
 
   return (
     <>
@@ -18,14 +57,13 @@ function ProductsPage() {
 
           <div className="mx-auto max-w-4xl pb-20 pt-14 text-center text-white">
             <p className="animate-fade-up text-sm font-bold uppercase tracking-[0.3em] text-lime-100">
-              Products
+              {content.eyebrow}
             </p>
             <h1 className="animate-fade-up-delayed mt-5 font-serif text-4xl leading-none tracking-tight sm:text-5xl lg:text-6xl">
-              Fertilizers and plant nutrition products in one dedicated section.
+              {content.title}
             </h1>
             <p className="animate-fade-up mx-auto mt-6 max-w-2xl text-base leading-8 text-white/84 sm:text-lg">
-              Explore the complete range of agricultural products in one place, including solutions
-              for crop nutrition, root development, plant resilience, and more efficient field performance.
+              {content.intro}
             </p>
           </div>
         </div>
@@ -33,8 +71,18 @@ function ProductsPage() {
 
       <main className="relative z-10 px-5 pb-24 sm:px-8 lg:px-14">
         <section className="mx-auto max-w-6xl">
-          <div className="flex flex-wrap justify-center gap-3">
-            {['All Products', ...productFamilies].map((family, index) => (
+          <div className="mx-auto -mt-6 mb-6 max-w-2xl sm:-mt-8">
+            <input
+              type="search"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              placeholder={content.searchPlaceholder}
+              className="w-full rounded-full border border-emerald-200  bg-white px-5 py-3 text-sm text-slate-700 shadow-sm outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200"
+            />
+          </div>
+
+          <div className="flex flex-nowrap justify-center gap-3 overflow-x-auto pb-2">
+            {[allProductsLabel, ...productFamilies.map((item) => item.label)].map((family, index) => (
               <button
                 className={`animate-fade-up rounded-full border px-4 py-2 text-sm font-semibold shadow-sm transition duration-300 ${
                   selectedFamily === family
@@ -64,7 +112,7 @@ function ProductsPage() {
                     {product.category}
                   </span>
                   <span className="rounded-full bg-[linear-gradient(135deg,#224b29,#d98b26)] px-3 py-1 text-[0.62rem] font-bold uppercase tracking-[0.12em] text-white">
-                    Spain
+                    {content.spain}
                   </span>
                 </div>
 
@@ -79,7 +127,7 @@ function ProductsPage() {
                 <div className="pt-5">
                   <h2 className="font-serif text-2xl text-slate-950">{product.name}</h2>
                   <p className="mt-3 text-sm leading-7 text-slate-600">{product.note}</p>
-                  <p className="mt-4 text-sm font-bold text-emerald-700">View product details</p>
+                  <p className="mt-4 text-sm font-bold text-emerald-700">{content.detailCta}</p>
                 </div>
               </a>
             ))}
@@ -87,7 +135,7 @@ function ProductsPage() {
 
           {visibleProducts.length === 0 && (
             <div className="mt-10 rounded-[1.6rem] border border-emerald-100 bg-white p-8 text-center text-slate-700 shadow-[0_16px_45px_rgba(70,90,50,0.08)]">
-              No products are currently assigned to this family.
+              {content.noResults}
             </div>
           )}
         </section>
