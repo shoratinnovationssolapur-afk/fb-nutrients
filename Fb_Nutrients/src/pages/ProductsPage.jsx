@@ -81,7 +81,7 @@ function ProductsPage() {
             />
           </div>
 
-          <div className="flex flex-nowrap justify-center gap-3 overflow-x-auto pb-2">
+          <div className="flex flex-nowrap justify-center gap-3 overflow-x-auto pb-2 hide-scrollbar">
             {[allProductsLabel, ...productFamilies.map((item) => item.label)].map((family, index) => (
               <button
                 className={`animate-fade-up rounded-full border px-4 py-2 text-sm font-semibold shadow-sm transition duration-300 ${

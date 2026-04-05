@@ -7,6 +7,12 @@ import strong40 from '../assets/Strong 40.jpeg'
 import ecoSil from '../assets/Eco-Sil.jpeg'
 import ecoalaRoot from '../assets/Ecoala Root.jpeg'
 import ecolaRoot from '../assets/Ecola Root.jpeg'
+import amiboro from '../assets/Amiboro.jpeg'
+import amizinc from '../assets/Amizinc.jpeg'
+import calfine from '../assets/calfine.jpeg'
+import fortiCal26 from '../assets/forti Cal 26.jpeg'
+import phosnova from '../assets/phosnova.jpeg'
+import zynox from '../assets/Zynox.jpeg'
 
 export const heroVideo = '/hero-video.mp4'
 export const heroImgSrc = heroImg
@@ -78,6 +84,9 @@ const productFamiliesByLanguage = {
     biostimulants: 'Biostimulants',
     correctors: 'Nutritional correctors',
     water: 'Water soluble fertilizers',
+    micronutrients: 'Micronutrients',
+    'secondary-nutrients': 'Secondary nutrients',
+    macronutrients: 'Macronutrients',
   },
   es: {
     microgranular: 'Fertilizantes microgranulados',
@@ -86,6 +95,9 @@ const productFamiliesByLanguage = {
     biostimulants: 'Bioestimulantes',
     correctors: 'Correctores nutricionales',
     water: 'Fertilizantes solubles en agua',
+    micronutrients: 'Micronutrientes',
+    'secondary-nutrients': 'Nutrientes secundarios',
+    macronutrients: 'Macronutrientes',
   },
 }
 
@@ -336,41 +348,222 @@ const products = [
     },
   },
   {
-    slug: 'ecola-root',
-    image: ecolaRoot,
-    familyKey: 'biostimulants',
+    slug: 'amiboro',
+    image: amiboro,
+    familyKey: 'micronutrients',
     content: {
       en: {
-        name: 'Ecola Root',
-        note: 'A root-care solution aimed at healthier early growth, better stability, and stronger root activity.',
-        category: 'Root Development',
-        family: productFamiliesByLanguage.en.biostimulants,
-        tagline: 'Root-care support for healthier starts and stronger plant stability.',
+        name: 'Amiboro',
+        note: 'A boron-based solution designed to support flowering, fruit setting, and overall plant development.',
+        category: 'Boron Nutrient',
+        family: productFamiliesByLanguage.en['micronutrients'],
+        tagline: 'Targeted boron support for improved flowering and fruit quality.',
         description:
-          'Ecola Root is created to promote healthier early-stage development, stronger root activity, and better crop stability, especially when early nutrition and establishment are priorities.',
+          'Amiboro is a chelated boron glycine liquid formulated to enhance reproductive growth, improve pollen viability, and support better fruit formation, especially in boron-deficient conditions.',
         benefits: [
-          'Promotes stronger root activity and healthier early growth.',
-          'Supports crop stability during establishment stages.',
-          'Works well in fertilizer programs focused on root care and plant balance.',
+          'Enhances flowering and fruit setting.',
+          'Improves pollen viability and fertilization.',
+          'Supports cell wall formation and nutrient transport.',
         ],
       },
       es: {
-        name: 'Ecola Root',
-        note: 'Una solucion de cuidado radicular orientada a un crecimiento inicial mas saludable, mayor estabilidad y una actividad radicular mas fuerte.',
-        category: 'Desarrollo radicular',
-        family: productFamiliesByLanguage.es.biostimulants,
-        tagline: 'Soporte radicular para comienzos mas saludables y una estabilidad vegetal mas fuerte.',
+        name: 'Amiboro',
+        note: 'Una solucion a base de boro diseñada para mejorar la floracion, el cuajado y el desarrollo general de la planta.',
+        category: 'Nutrición de boro',
+        family: productFamiliesByLanguage.es.micronutrients,
+        tagline: 'Soporte de boro para una mejor floracion y calidad del fruto.',
         description:
-          'Ecola Root se crea para promover un desarrollo inicial mas saludable, una actividad radicular mas fuerte y una mejor estabilidad del cultivo, especialmente cuando la nutricion temprana y el establecimiento son prioritarios.',
+          'Amiboro es un liquido de glicina quelatada de boro formulado para mejorar el crecimiento reproductivo y la formacion de frutos.',
         benefits: [
-          'Promueve una actividad radicular mas fuerte y un crecimiento inicial mas saludable.',
-          'Apoya la estabilidad del cultivo durante el establecimiento.',
-          'Funciona bien en programas de fertilizacion centrados en el cuidado radicular y el equilibrio vegetal.',
+          'Mejora la floracion y el cuajado.',
+          'Favorece la viabilidad del polen.',
+          'Apoya la formacion de paredes celulares.',
+        ],
+      },
+    },
+  },
+
+  {
+    slug: 'amizinc',
+    image: amizinc,
+    familyKey: 'micronutrients',
+    content: {
+      en: {
+        name: 'Amizinc',
+        note: 'A zinc-based formulation aimed at improving plant metabolism and growth efficiency.',
+        category: 'Zinc Nutrition',
+        family: productFamiliesByLanguage.en.micronutrients,
+        tagline: 'Essential zinc support for balanced growth and higher productivity.',
+        description:
+          'Amizinc is a chelated zinc glycine liquid that supports enzyme activation, chlorophyll formation, and overall plant vigor, especially in zinc-deficient soils.',
+        benefits: [
+          'Promotes healthy vegetative growth.',
+          'Improves enzyme activity and metabolism.',
+          'Enhances chlorophyll production and leaf health.',
+        ],
+      },
+      es: {
+        name: 'Amizinc',
+        note: 'Una formulacion de zinc diseñada para mejorar el metabolismo y crecimiento de la planta.',
+        category: 'Nutrición de zinc',
+        family: productFamiliesByLanguage.es.micronutrients,
+        tagline: 'Soporte esencial de zinc para un crecimiento equilibrado.',
+        description:
+          'Amizinc es un liquido quelatado de zinc glicina que mejora el vigor y el desarrollo vegetal.',
+        benefits: [
+          'Favorece el crecimiento vegetativo.',
+          'Mejora la actividad enzimatica.',
+          'Incrementa la produccion de clorofila.',
+        ],
+      },
+    },
+  },
+
+  {
+    slug: 'calfine',
+    image: calfine,
+    familyKey: 'secondary-nutrients',
+    content: {
+      en: {
+        name: 'Calfine',
+        note: 'A balanced calcium and magnesium formulation for improved plant structure and nutrient balance.',
+        category: 'Secondary-nutrients',
+        family: productFamiliesByLanguage.en['secondary-nutrients'],
+        tagline: 'Balanced mineral nutrition for stronger plants and better yield stability.',
+        description:
+          'Calfine is a fluid compound mineral fertilizer enriched with calcium, magnesium, and boron, designed to enhance structural strength, nutrient balance, and crop performance.',
+        benefits: [
+          'Improves plant strength and structure.',
+          'Supports nutrient balance and uptake.',
+          'Enhances crop quality and resilience.',
+        ],
+      },
+      es: {
+        name: 'Calfine',
+        note: 'Una formulacion equilibrada de calcio y magnesio para mejorar la estructura vegetal.',
+        category: 'Nutrientes secundarios',
+        family: productFamiliesByLanguage.es['secondary-nutrients'],
+        tagline: 'Nutricion mineral equilibrada para plantas mas fuertes.',
+        description:
+          'Calfine es un fertilizante liquido con calcio, magnesio y boro para mejorar la estabilidad del cultivo.',
+        benefits: [
+          'Refuerza la estructura de la planta.',
+          'Mejora la absorcion de nutrientes.',
+          'Aumenta la calidad del cultivo.',
+        ],
+      },
+    },
+  },
+
+  {
+    slug: 'forti-cal-26',
+    image: fortiCal26,
+    familyKey: 'secondary-nutrients',
+    content: {
+      en: {
+        name: 'Forti Cal 26',
+        note: 'A high-calcium solution designed to strengthen plant tissues and improve crop quality.',
+        category: 'Calcium Nutrition',
+        family: productFamiliesByLanguage.en['secondary-nutrients'],
+        tagline: 'High-strength calcium support for improved crop firmness and quality.',
+        description:
+          'Forti Cal 26 delivers concentrated calcium to improve cell wall strength, reduce physiological disorders, and enhance fruit firmness and shelf life.',
+        benefits: [
+          'Strengthens cell walls and plant tissues.',
+          'Reduces calcium deficiency disorders.',
+          'Improves fruit firmness and shelf life.',
+        ],
+      },
+      es: {
+        name: 'Forti Cal 26',
+        note: 'Una solucion rica en calcio para fortalecer los tejidos vegetales.',
+        category: 'Nutricion de calcio',
+        family: productFamiliesByLanguage.es['secondary-nutrients'],
+        tagline: 'Soporte de calcio para mayor calidad del cultivo.',
+        description:
+          'Forti Cal 26 proporciona calcio concentrado para mejorar la firmeza y calidad del fruto.',
+        benefits: [
+          'Fortalece los tejidos vegetales.',
+          'Reduce deficiencias de calcio.',
+          'Mejora la firmeza del fruto.',
+        ],
+      },
+    },
+  },
+
+  {
+    slug: 'phosnova',
+    image: phosnova,
+    familyKey: 'macronutrients',
+    content: {
+      en: {
+        name: 'Phosnova',
+        note: 'A phosphorus-rich solution supporting energy transfer and root development.',
+        category: 'Phosphorus Nutrition',
+        family: productFamiliesByLanguage.en['macronutrients'],
+        tagline: 'Efficient phosphorus supply for strong roots and active growth.',
+        description:
+          'Phosnova is a calcium dihydrogen phosphate formulation designed to boost root development, energy transfer, and early plant establishment.',
+        benefits: [
+          'Enhances root development.',
+          'Supports energy transfer in plants.',
+          'Improves early-stage crop establishment.',
+        ],
+      },
+      es: {
+        name: 'Phosnova',
+        note: 'Una solucion rica en fosforo para el desarrollo radicular.',
+        category: 'Nutricion de fosforo',
+        family: productFamiliesByLanguage.es['macronutrients'],
+        tagline: 'Fosforo eficiente para raices fuertes.',
+        description:
+          'Phosnova mejora el crecimiento radicular y el desarrollo temprano del cultivo.',
+        benefits: [
+          'Mejora el desarrollo radicular.',
+          'Favorece el crecimiento inicial.',
+          'Apoya la transferencia de energia.',
+        ],
+      },
+    },
+  },
+
+  {
+    slug: 'zynox',
+    image: zynox,
+    familyKey: 'micronutrients',
+    content: {
+      en: {
+        name: 'Zynox',
+        note: 'A zinc gluconate-based solution for improved plant growth and metabolic activity.',
+        category: 'Zinc Nutrition',
+        family: productFamiliesByLanguage.en.micronutrients,
+        tagline: 'Reliable zinc nutrition for stronger growth and higher efficiency.',
+        description:
+          'Zynox provides bioavailable zinc to support enzymatic processes, improve plant vigor, and enhance overall crop performance.',
+        benefits: [
+          'Boosts plant metabolism and growth.',
+          'Improves enzyme activity.',
+          'Enhances crop vigor and productivity.',
+        ],
+      },
+      es: {
+        name: 'Zynox',
+        note: 'Una solucion de gluconato de zinc para mejorar el crecimiento vegetal.',
+        category: 'Nutricion de zinc',
+        family: productFamiliesByLanguage.es.micronutrients,
+        tagline: 'Nutricion de zinc para un crecimiento eficiente.',
+        description:
+          'Zynox proporciona zinc biodisponible para mejorar el vigor y rendimiento del cultivo.',
+        benefits: [
+          'Mejora el metabolismo vegetal.',
+          'Aumenta la actividad enzimatica.',
+          'Favorece el crecimiento saludable.',
         ],
       },
     },
   },
 ]
+
 
 const galleryCardsByLanguage = {
   en: [
