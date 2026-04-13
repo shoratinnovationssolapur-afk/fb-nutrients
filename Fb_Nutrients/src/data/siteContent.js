@@ -111,7 +111,6 @@ const products = [
         name: 'Spani Nutrients',
         note: 'A balanced nutrition formula designed to improve crop efficiency, plant strength, and overall field performance.',
         category: 'Agronutrition',
-        family: productFamiliesByLanguage.en.npk,
         tagline: 'Balanced crop nutrition for stronger and more productive fields.',
         description:
           'Spani Nutrients is developed for growers who need a dependable fertilizer program that supports soil balance, steady nutrient availability, and healthier plant growth throughout the crop cycle.',
@@ -125,7 +124,6 @@ const products = [
         name: 'Spani Nutrients',
         note: 'Una formula de nutricion equilibrada disenada para mejorar la eficiencia del cultivo, la fuerza de la planta y el rendimiento general del campo.',
         category: 'Agronutricion',
-        family: productFamiliesByLanguage.es.npk,
         tagline: 'Nutricion equilibrada para campos mas fuertes y productivos.',
         description:
           'Spani Nutrients esta desarrollado para agricultores que necesitan un programa de fertilizacion confiable que favorezca el equilibrio del suelo, la disponibilidad constante de nutrientes y un crecimiento vegetal mas saludable durante todo el ciclo del cultivo.',
@@ -146,7 +144,6 @@ const products = [
         name: 'Spani Grow',
         note: 'A growth-stage solution that supports stronger structure, greener development, and healthier early growth.',
         category: 'Growth Formula',
-        family: productFamiliesByLanguage.en.water,
         tagline: 'Growth support for greener plants and stronger early development.',
         description:
           'Spani Grow is intended for the active development stage, helping crops build stronger stems, healthier foliage, and better overall vegetative growth under field and controlled conditions.',
@@ -160,7 +157,6 @@ const products = [
         name: 'Spani Grow',
         note: 'Una solucion para la etapa de crecimiento que favorece una estructura mas fuerte, un desarrollo mas verde y un crecimiento inicial mas saludable.',
         category: 'Formula de crecimiento',
-        family: productFamiliesByLanguage.es.water,
         tagline: 'Apoyo al crecimiento para plantas mas verdes y un desarrollo inicial mas fuerte.',
         description:
           'Spani Grow esta pensado para la etapa de desarrollo activo, ayudando a los cultivos a formar tallos mas fuertes, follaje mas sano y un mejor crecimiento vegetativo general en campo y en condiciones controladas.',
@@ -181,7 +177,6 @@ const products = [
         name: 'Spani Bud',
         note: 'A bloom-focused formula created to support flower development, crop quality, and a cleaner final finish.',
         category: 'Bloom Formula',
-        family: productFamiliesByLanguage.en.foliar,
         tagline: 'Flowering nutrition for quality, finish, and bloom performance.',
         description:
           'Spani Bud is formulated for the flowering and production stage, helping crops direct nutrition toward bloom development, final quality, and a more complete finishing cycle.',
@@ -195,7 +190,6 @@ const products = [
         name: 'Spani Bud',
         note: 'Una formula enfocada en la floracion creada para apoyar el desarrollo floral, la calidad del cultivo y un acabado final mas limpio.',
         category: 'Formula de floracion',
-        family: productFamiliesByLanguage.es.foliar,
         tagline: 'Nutricion para floracion con enfoque en calidad, acabado y rendimiento floral.',
         description:
           'Spani Bud esta formulado para la etapa de floracion y produccion, ayudando a los cultivos a dirigir la nutricion hacia el desarrollo floral, la calidad final y un ciclo de terminacion mas completo.',
@@ -216,7 +210,6 @@ const products = [
         name: 'Spani Ferolin',
         note: 'A micronutrient solution formulated to maintain plant vigor, color, and visible crop health.',
         category: 'Nutritional Corrector',
-        family: productFamiliesByLanguage.en.correctors,
         tagline: 'Micronutrient support for healthier color and stronger crop vitality.',
         description:
           'Spani Ferolin provides targeted micronutrient support to help correct imbalances, protect plant color, and maintain vigorous crop development when nutritional pressure affects performance.',
@@ -230,7 +223,6 @@ const products = [
         name: 'Spani Ferolin',
         note: 'Una solucion de micronutrientes formulada para mantener el vigor, el color y la salud visible del cultivo.',
         category: 'Corrector nutricional',
-        family: productFamiliesByLanguage.es.correctors,
         tagline: 'Soporte de micronutrientes para mejor color y mayor vitalidad del cultivo.',
         description:
           'Spani Ferolin aporta un soporte especifico de micronutrientes para ayudar a corregir desequilibrios, proteger el color de la planta y mantener un desarrollo vigoroso cuando la presion nutricional afecta el rendimiento.',
@@ -251,7 +243,7 @@ const products = [
         name: 'Strong 40',
         note: 'A high-impact support product positioned for demanding crop conditions and stronger technical performance.',
         category: 'Special Formula',
-        family: productFamiliesByLanguage.en.microgranular,
+
         tagline: 'High-impact support for demanding fields and performance-driven programs.',
         description:
           'Strong 40 is presented as a technical solution for growers who need reliable support in intensive field conditions, with a focus on stronger crop response and consistent performance.',
@@ -265,7 +257,7 @@ const products = [
         name: 'Strong 40',
         note: 'Un producto de apoyo de alto impacto pensado para condiciones exigentes y un rendimiento tecnico superior.',
         category: 'Formula especial',
-        family: productFamiliesByLanguage.es.microgranular,
+
         tagline: 'Soporte de alto impacto para campos exigentes y programas orientados al rendimiento.',
         description:
           'Strong 40 se presenta como una solucion tecnica para agricultores que necesitan apoyo confiable en condiciones intensivas de campo, con enfoque en una mejor respuesta del cultivo y un rendimiento consistente.',
@@ -286,7 +278,7 @@ const products = [
         name: 'Eco-Sil',
         note: 'A silicon-based solution developed to improve resilience, reinforce plant structure, and support field stability.',
         category: 'Crop Protection',
-        family: productFamiliesByLanguage.en.foliar,
+
         tagline: 'Silicon support for resilience, structure, and field stability.',
         description:
           'Eco-Sil is designed to help crops develop stronger structural resistance, improved resilience, and better tolerance in changing agricultural conditions where plant stability matters.',
@@ -300,7 +292,7 @@ const products = [
         name: 'Eco-Sil',
         note: 'Una solucion a base de silicio desarrollada para mejorar la resistencia, reforzar la estructura vegetal y apoyar la estabilidad en campo.',
         category: 'Proteccion del cultivo',
-        family: productFamiliesByLanguage.es.foliar,
+
         tagline: 'Soporte con silicio para resistencia, estructura y estabilidad en campo.',
         description:
           'Eco-Sil esta disenado para ayudar a los cultivos a desarrollar una resistencia estructural mas fuerte, mayor resiliencia y mejor tolerancia en condiciones agricolas cambiantes donde la estabilidad vegetal es clave.',
@@ -321,7 +313,7 @@ const products = [
         name: 'Ecoala Root',
         note: 'A root development product designed to encourage faster establishment and stronger nutrient uptake.',
         category: 'Root Development',
-        family: productFamiliesByLanguage.en.biostimulants,
+
         tagline: 'Root development support for faster establishment and nutrient uptake.',
         description:
           'Ecoala Root is aimed at improving root activity during establishment and early growth, helping crops absorb nutrients more efficiently and create a stronger base for later development.',
@@ -335,7 +327,7 @@ const products = [
         name: 'Ecoala Root',
         note: 'Un producto para desarrollo radicular disenado para favorecer un establecimiento mas rapido y una absorcion de nutrientes mas fuerte.',
         category: 'Desarrollo radicular',
-        family: productFamiliesByLanguage.es.biostimulants,
+
         tagline: 'Soporte radicular para un establecimiento mas rapido y mejor absorcion de nutrientes.',
         description:
           'Ecoala Root esta orientado a mejorar la actividad radicular durante el establecimiento y el crecimiento inicial, ayudando a los cultivos a absorber nutrientes con mayor eficiencia y crear una base mas fuerte para etapas posteriores.',
@@ -356,7 +348,7 @@ const products = [
         name: 'Amiboro',
         note: 'A boron-based solution designed to support flowering, fruit setting, and overall plant development.',
         category: 'Boron Nutrient',
-        family: productFamiliesByLanguage.en['micronutrients'],
+
         tagline: 'Targeted boron support for improved flowering and fruit quality.',
         description:
           'Amiboro is a chelated boron glycine liquid formulated to enhance reproductive growth, improve pollen viability, and support better fruit formation, especially in boron-deficient conditions.',
@@ -370,7 +362,7 @@ const products = [
         name: 'Amiboro',
         note: 'Una solucion a base de boro diseñada para mejorar la floracion, el cuajado y el desarrollo general de la planta.',
         category: 'Nutrición de boro',
-        family: productFamiliesByLanguage.es.micronutrients,
+
         tagline: 'Soporte de boro para una mejor floracion y calidad del fruto.',
         description:
           'Amiboro es un liquido de glicina quelatada de boro formulado para mejorar el crecimiento reproductivo y la formacion de frutos.',
@@ -392,7 +384,7 @@ const products = [
         name: 'Amizinc',
         note: 'A zinc-based formulation aimed at improving plant metabolism and growth efficiency.',
         category: 'Zinc Nutrition',
-        family: productFamiliesByLanguage.en.micronutrients,
+
         tagline: 'Essential zinc support for balanced growth and higher productivity.',
         description:
           'Amizinc is a chelated zinc glycine liquid that supports enzyme activation, chlorophyll formation, and overall plant vigor, especially in zinc-deficient soils.',
@@ -406,7 +398,7 @@ const products = [
         name: 'Amizinc',
         note: 'Una formulacion de zinc diseñada para mejorar el metabolismo y crecimiento de la planta.',
         category: 'Nutrición de zinc',
-        family: productFamiliesByLanguage.es.micronutrients,
+
         tagline: 'Soporte esencial de zinc para un crecimiento equilibrado.',
         description:
           'Amizinc es un liquido quelatado de zinc glicina que mejora el vigor y el desarrollo vegetal.',
@@ -428,7 +420,7 @@ const products = [
         name: 'Calfine',
         note: 'A balanced calcium and magnesium formulation for improved plant structure and nutrient balance.',
         category: 'Secondary-nutrients',
-        family: productFamiliesByLanguage.en['secondary-nutrients'],
+
         tagline: 'Balanced mineral nutrition for stronger plants and better yield stability.',
         description:
           'Calfine is a fluid compound mineral fertilizer enriched with calcium, magnesium, and boron, designed to enhance structural strength, nutrient balance, and crop performance.',
@@ -442,7 +434,7 @@ const products = [
         name: 'Calfine',
         note: 'Una formulacion equilibrada de calcio y magnesio para mejorar la estructura vegetal.',
         category: 'Nutrientes secundarios',
-        family: productFamiliesByLanguage.es['secondary-nutrients'],
+
         tagline: 'Nutricion mineral equilibrada para plantas mas fuertes.',
         description:
           'Calfine es un fertilizante liquido con calcio, magnesio y boro para mejorar la estabilidad del cultivo.',
@@ -464,7 +456,7 @@ const products = [
         name: 'Forti Cal 26',
         note: 'A high-calcium solution designed to strengthen plant tissues and improve crop quality.',
         category: 'Calcium Nutrition',
-        family: productFamiliesByLanguage.en['secondary-nutrients'],
+
         tagline: 'High-strength calcium support for improved crop firmness and quality.',
         description:
           'Forti Cal 26 delivers concentrated calcium to improve cell wall strength, reduce physiological disorders, and enhance fruit firmness and shelf life.',
@@ -478,7 +470,7 @@ const products = [
         name: 'Forti Cal 26',
         note: 'Una solucion rica en calcio para fortalecer los tejidos vegetales.',
         category: 'Nutricion de calcio',
-        family: productFamiliesByLanguage.es['secondary-nutrients'],
+
         tagline: 'Soporte de calcio para mayor calidad del cultivo.',
         description:
           'Forti Cal 26 proporciona calcio concentrado para mejorar la firmeza y calidad del fruto.',
@@ -500,7 +492,7 @@ const products = [
         name: 'Phosnova',
         note: 'A phosphorus-rich solution supporting energy transfer and root development.',
         category: 'Phosphorus Nutrition',
-        family: productFamiliesByLanguage.en['macronutrients'],
+
         tagline: 'Efficient phosphorus supply for strong roots and active growth.',
         description:
           'Phosnova is a calcium dihydrogen phosphate formulation designed to boost root development, energy transfer, and early plant establishment.',
@@ -514,7 +506,7 @@ const products = [
         name: 'Phosnova',
         note: 'Una solucion rica en fosforo para el desarrollo radicular.',
         category: 'Nutricion de fosforo',
-        family: productFamiliesByLanguage.es['macronutrients'],
+
         tagline: 'Fosforo eficiente para raices fuertes.',
         description:
           'Phosnova mejora el crecimiento radicular y el desarrollo temprano del cultivo.',
@@ -536,7 +528,7 @@ const products = [
         name: 'Zynox',
         note: 'A zinc gluconate-based solution for improved plant growth and metabolic activity.',
         category: 'Zinc Nutrition',
-        family: productFamiliesByLanguage.en.micronutrients,
+
         tagline: 'Reliable zinc nutrition for stronger growth and higher efficiency.',
         description:
           'Zynox provides bioavailable zinc to support enzymatic processes, improve plant vigor, and enhance overall crop performance.',
@@ -550,7 +542,7 @@ const products = [
         name: 'Zynox',
         note: 'Una solucion de gluconato de zinc para mejorar el crecimiento vegetal.',
         category: 'Nutricion de zinc',
-        family: productFamiliesByLanguage.es.micronutrients,
+
         tagline: 'Nutricion de zinc para un crecimiento eficiente.',
         description:
           'Zynox proporciona zinc biodisponible para mejorar el vigor y rendimiento del cultivo.',
@@ -624,6 +616,7 @@ export function getAllProducts(language = 'en') {
     slug: product.slug,
     image: product.image,
     familyKey: product.familyKey,
+    family: productFamiliesByLanguage[language]?.[product.familyKey] || productFamiliesByLanguage.en[product.familyKey],
     ...product.content[language],
   }))
 }

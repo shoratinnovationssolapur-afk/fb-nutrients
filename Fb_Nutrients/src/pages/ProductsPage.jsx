@@ -12,25 +12,25 @@ function ProductsPage() {
   const content =
     language === 'es'
       ? {
-          eyebrow: 'Productos',
-          title: 'Fertilizantes y productos de nutricion vegetal en una seccion dedicada.',
-          intro:
-            'Explora toda la gama de productos agricolas en un solo lugar, incluyendo soluciones para nutricion del cultivo, desarrollo radicular, resiliencia vegetal y un rendimiento de campo mas eficiente.',
-          searchPlaceholder: 'Buscar productos por nombre, categoria o familia',
-          detailCta: 'Ver detalles del producto',
-          noResults: 'No hay productos que coincidan con tu busqueda y filtro de familia.',
-          spain: 'Espana',
-        }
+        eyebrow: 'Productos',
+        title: 'Fertilizantes y productos de nutricion vegetal en una seccion dedicada.',
+        intro:
+          'Explora toda la gama de productos agricolas en un solo lugar, incluyendo soluciones para nutricion del cultivo, desarrollo radicular, resiliencia vegetal y un rendimiento de campo mas eficiente.',
+        searchPlaceholder: 'Buscar productos por nombre, categoria o familia',
+        detailCta: 'Ver detalles del producto',
+        noResults: 'No hay productos que coincidan con tu busqueda y filtro de familia.',
+        spain: 'Espana',
+      }
       : {
-          eyebrow: 'Products',
-          title: 'Fertilizers and plant nutrition products in one dedicated section.',
-          intro:
-            'Explore the complete range of agricultural products in one place, including solutions for crop nutrition, root development, plant resilience, and more efficient field performance.',
-          searchPlaceholder: 'Search products by name, category, or family',
-          detailCta: 'View product details',
-          noResults: 'No products match your current search and family filter.',
-          spain: 'Spain',
-        }
+        eyebrow: 'Products',
+        title: 'Fertilizers and plant nutrition products in one dedicated section.',
+        intro:
+          'Explore the complete range of agricultural products in one place, including solutions for crop nutrition, root development, plant resilience, and more efficient field performance.',
+        searchPlaceholder: 'Search products by name, category, or family',
+        detailCta: 'View product details',
+        noResults: 'No products match your current search and family filter.',
+        spain: 'Spain',
+      }
 
   const [selectedFamily, setSelectedFamily] = useState(allProductsLabel)
   const [searchTerm, setSearchTerm] = useState('')
@@ -81,23 +81,23 @@ function ProductsPage() {
             />
           </div>
 
-          <div className="flex flex-nowrap justify-center gap-3 overflow-x-auto pb-2 hide-scrollbar">
-            {[allProductsLabel, ...productFamilies.map((item) => item.label)].map((family, index) => (
-              <button
-                className={`animate-fade-up rounded-full border px-4 py-2 text-sm font-semibold shadow-sm transition duration-300 ${
-                  selectedFamily === family
-                    ? 'border-emerald-700 bg-emerald-700 text-white'
-                    : 'border-emerald-200 bg-white text-slate-700 hover:border-emerald-400 hover:bg-emerald-50'
-                }`}
-                key={family}
-                onClick={() => setSelectedFamily(family)}
-                type="button"
-                style={{ animationDelay: `${index * 90}ms` }}
-              >
-                {family}
-              </button>
-            ))}
-          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+  {[allProductsLabel, ...productFamilies.map((item) => item.label)].map((family, index) => (
+    <button
+      key={family}
+      onClick={() => setSelectedFamily(family)}
+      type="button"
+      style={{ animationDelay: `${index * 90}ms` }}
+      className={`text-center rounded-full px-3 py-2 text-xs sm:text-sm font-semibold shadow-sm transition duration-300 break-words ${
+        selectedFamily === family
+          ? 'border-emerald-700 bg-emerald-700 text-white'
+          : 'border border-emerald-200 bg-white text-slate-700 hover:border-emerald-400 hover:bg-emerald-50'
+      }`}
+    >
+      {family}
+    </button>
+  ))}
+</div>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
             {visibleProducts.map((product, index) => (

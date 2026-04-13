@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { getNavLinks } from '../data/siteContent.js'
 import { useLanguage } from './LanguageContext.jsx'
 import spanishFlag from '../assets/spanishFlag.svg'
+import fbNutrientsLogo from '../assets/FBNutrientsLogo.png'
 
 function Navigation() {
   const { language, setLanguage } = useLanguage()
@@ -9,7 +10,7 @@ function Navigation() {
   const content = useMemo(() => {
     if (language === 'es') {
       return {
-        brandTop: 'FBNE Espana',
+        brandTop:  <img src={fbNutrientsLogo} alt="FB Nutrients logo" className="h-20 w-50" />,
         quality: 'Calidad certificada',
         agronutrition: 'Agronutricion avanzada',
         languageLabel: 'Contenido en espanol',
@@ -20,7 +21,7 @@ function Navigation() {
     }
 
     return {
-      brandTop: 'FBNE Spain',
+      brandTop: <img src={fbNutrientsLogo} alt="FB Nutrients logo" className="h-20 w-50" />,
       quality: 'Certified quality',
       agronutrition: 'Advanced agronutrition',
       languageLabel: 'English content',
@@ -34,11 +35,11 @@ function Navigation() {
     <>
       <div className="flex flex-col gap-3 border-b border-white/15 py-3 text-sm text-white/85 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
         <div className="flex items-center gap-3 font-semibold">
-          <img
+          {/* <img
             src={spanishFlag}
             alt="Spain flag"
             className="h-5 w-7 rounded-sm object-cover shadow-[0_2px_8px_rgba(0,0,0,0.18)]"
-          />
+          /> */}
           <span>{content.brandTop}</span>
         </div>
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2 max-sm:justify-between">
